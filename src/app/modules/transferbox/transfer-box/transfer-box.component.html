@@ -1,0 +1,26 @@
+<div class="flex-container">
+  <div class="flex-item-6 transferbox shadow">
+    <div class="flex-item-12 header">
+      Available 
+      <span class="badge">{{available.length}}</span>
+      <span> <button (click)="selectAll('aval',!selectAlls)" [disabled]="available.length == 0"> Select All </button></span>
+      <span> <button [disabled]="available.length == 0" (click)="moveAll('right')"> > </button></span>
+    </div>
+    <div class="flex-item-12 body">
+      <div class="transferbox-item" *ngFor="let item of available;" [ngClass]="item.selected ? 'selected' : 'none'" 
+        (click)="selectItem(item)" (dblclick)="moveItem(item,'right')"> {{item.label }} </div>
+    </div>
+  </div>
+  <div class="flex-item-6 transferbox shadow">
+      <div class="flex-item-12 header">
+          <span> <button [disabled]="selected.length == 0" (click)="moveAll('left')"> < </button></span>
+         <span> <button (click)="selectAll('sel',!selectAlla)" [disabled]="selected.length == 0" > DeSelect All </button></span>
+         Selected 
+         <span class="badge">{{selected.length}}</span>
+        </div>
+        <div class="flex-item-12 body">
+            <div class="transferbox-item" *ngFor="let item of selected;" [ngClass]="item.selected ? 'selected' : 'none'" 
+            (click)="selectItem(item)" (dblclick)="moveItem(item,'left')"> {{item.label }} </div>
+        </div>
+  </div>
+</div>

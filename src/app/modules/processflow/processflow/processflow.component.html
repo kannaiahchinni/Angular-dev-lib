@@ -1,0 +1,7 @@
+<div *ngIf="!error; else  showMessage">
+    <ul class="stepper">
+      <li *ngFor="let step of stages" [ngClass]="step.status" [style.width]="(100/stages.length)+'%'">{{step.label}}</li>
+    </ul>
+</div>
+<ng-template #showMessage> Please validate your input. It should be array of objects </ng-template>
+

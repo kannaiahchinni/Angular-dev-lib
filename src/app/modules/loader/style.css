@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.km-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .km-modal {
+    box-shadow:0 3px 11px 0 #9E9E9E;
+    height: 100px;
+    padding: 20px;
+    background: #FFF;
+    border-radius:10px;
+    width: 200px;
+  
+  }
+  .km-loader {
+      border: 10px solid #efefef; /* Light grey */
+      border-left: 10px  #feb645; /* Blue  */
+      border-right: 10px  #1f3b08; /* Blue */
+      border-top: 10px solid #3498db;
+      border-bottom: 10px solid #ff920a;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-left:44%;
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+  .km-vertical {
+    left:0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    margin:auto;
+    position: absolute;
+  }

@@ -1,0 +1,78 @@
+.flex-container{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   padding: 2px;
+}
+.flex-container-start{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+.flex-container .flex-item-12{
+    clear: both;
+    width: 100%;
+}
+
+@media screen and (min-width: 480px){
+    .flex-container .flex-item-6 {
+        width: 49%;
+        float: left;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .flex-container .flex-item-6 {
+        width: 100%;
+    }
+}
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.badge{
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    background-color: #333;
+    color:#fff;
+    border-radius: 50%;
+    line-height: 1.5em;
+}
+.shadow {
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.11);
+    background: #fff;
+  }
+  
+
+
+
+
+/* component related css */
+.header {
+    border-bottom: 1px solid #ddd;
+    height:50px;
+}
+.transferbox {
+    border:1px solid #ddd;
+    padding:2px;
+}
+.selected,.transferbox-item:hover  {
+    background-color:#489cdf;
+    color:#fff;
+}
+
+.transferbox-item{
+    border-bottom: 1px solid #e0dcdc;
+    padding:6px;
+}
+.transferbox-item:last-child {
+    border-bottom: none;
+}

@@ -1,0 +1,63 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+@import "https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro";
+*{
+    font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
+}
+.stepper {
+    counter-reset: step;
+    padding:0px;
+    margin:0px;
+    font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
+}
+.stepper li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    text-align: center;
+    color:#445864;
+    font-family: "SourceSansPro", Helvetica, Arial, sans-serif;
+}
+.stepper li.complete::before{
+    background: #56bc62;
+    border:1px solid #4cae50;
+    content: "\f00c";
+    font-family: "FontAwesome";
+}
+.stepper li::before{
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: #cfd1d4;
+    border: solid 1px #c0c3c9;
+    box-shadow: 0 0 0 5px #ebebeb;
+    color: #ffffff;
+    z-index: 200;
+    position: relative;
+}
+.stepper li::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 10px;
+    left: -50%;
+    z-index: 100;
+    background-color: #e5e5e5;
+    border: solid 1px #c6c6c6;
+}
+
+.stepper li:first-child::after{
+    content: none;
+}
+.stepper li.active::before{
+    background-color: #278dfe;
+    border: 1px solid #2c86ae;
+}
